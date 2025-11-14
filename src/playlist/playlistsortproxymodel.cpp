@@ -15,6 +15,7 @@ PlaylistSortProxyModel::PlaylistSortProxyModel(QObject *parent)
 
 void PlaylistSortProxyModel::sortItems(Sort sortMode)
 {
+    setSortCaseSensitivity(Qt::CaseInsensitive);
     switch (sortMode) {
     case Sort::NameAscending: {
         setSortRole(PlaylistModel::NameRole);
