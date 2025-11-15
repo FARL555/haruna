@@ -11,6 +11,7 @@ PlaylistSortProxyModel::PlaylistSortProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
     setDynamicSortFilter(true);
+    setSortCaseSensitivity(Qt::CaseInsensitive);
 }
 
 void PlaylistSortProxyModel::sortItems(Sort sortMode)
