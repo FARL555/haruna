@@ -66,7 +66,9 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case NameRole:
         return QVariant(item.filename);
     case TitleRole:
-        return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
+        //return item.mediaTitle.isEmpty() ? QVariant(item.filename) : QVariant(item.mediaTitle);
+        //use filename as title
+        return QVariant(item.filename);
     case PathRole:
         return QVariant(item.url);
     case DurationRole:
